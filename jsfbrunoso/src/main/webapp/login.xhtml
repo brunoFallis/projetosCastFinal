@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	
+	<title>Login</title>
+
+</h:head>
+
+<h:body>
+	
+	<h:form>
+	
+		<div>
+			<p:inputText pt:placeholder="username" value="#{user.collegeDTO.username}"/>
+		</div>
+		
+		<div>
+			<p:inputText pt:placeholder="password" value="#{user.collegeDTO.password}"/>
+		</div>
+		
+		<div>
+			<p:commandButton action="#{user.validateLogin}" value="login"/>
+		</div>
+		
+	</h:form>
+	
+
+</h:body>
+
+</html>

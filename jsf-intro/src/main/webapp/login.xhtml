@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+     
+    <h:head>
+    </h:head>
+ 
+    <h:body>
+    
+    	<p:messages for="usuarioInvalidoMsg" showDetail="true">
+    		<p:autoUpdate />
+    	</p:messages>
+        
+        <h:form autocomplete="off" id="form">        
+        	<p:inputText required="true" id="usuario"
+        				requiredMessage="O campo usuário é obrigatório"
+        				value="#{identidade.usuario}" />
+        	<p:message for="usuario">
+        		<p:autoUpdate/>
+        	</p:message>
+        	<p:password required="true" id="senha" 
+        				requiredMessage="O campo senha é obrigatório" 
+        				value="#{identidade.senha}" />
+        	<p:message for="senha">
+        		<p:autoUpdate/>
+        	</p:message>
+        	<div>
+	        	<p:commandButton action="#{identidade.logar()}" 
+	        		value="Login"/>
+        	</div>
+        	        
+        </h:form>
+        
+    </h:body>
+</html>
