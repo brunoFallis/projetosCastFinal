@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<description></description>
+  	<display-name>Logging</display-name>
+  	<servlet-name>Logging</servlet-name>
+  	<servlet-class>br.com.cast.postSystem.servlet.Logging</servlet-class>
+  </servlet>
+  <servlet>
+  	<description></description>
+  	<display-name>Delete</display-name>
+  	<servlet-name>Delete</servlet-name>
+	<servlet-class>br.com.cast.postSystem.servlet.Delete</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>altAdd</display-name>
+  	<servlet-name>altAdd</servlet-name>
+  	<servlet-class>br.com.cast.postSystem.servlet.altAdd</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>Download</display-name>
+  	<servlet-name>Download</servlet-name>
+  	<servlet-class>br.com.cast.postSystem.servlet.Download</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>viewAltAdd</display-name>
+  	<servlet-name>viewAltAdd</servlet-name>
+  	<servlet-class>br.com.cast.postSystem.servlet.viewAltAdd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Logging</servlet-name>
+  	<url-pattern>/Logging</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Delete</servlet-name>
+  	<url-pattern>/Delete</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>altAdd</servlet-name>
+  	<url-pattern>/altAdd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Download</servlet-name>
+  	<url-pattern>/Download</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>viewAltAdd</servlet-name>
+  	<url-pattern>/viewAltAdd</url-pattern>
+  </servlet-mapping>
+</web-app>

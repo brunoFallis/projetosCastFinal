@@ -1,0 +1,47 @@
+package br.com.cast.persistence;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.NoResultException;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import br.com.cast.entities.User;
+
+public class UserDAO {
+	
+	EntityManagerFactory emf;
+	EntityManager em;
+	
+	public UserDAO() {
+		this.emf = Persistence.createEntityManagerFactory("puPostFinal");
+		this.em = emf.createEntityManager();
+	}
+	
+	public User searchUser(String username, String pass) {
+		try {
+			Query query = this.em.createQuery("from User where username = :user and password = :pass");
+			query.setParameter("user", username).setParameter("pass", pass);
+			return (User)query.getSingleResult();
+		} catch (NoResultException e) {
+			return null;
+		}
+	}
+	
+	public User searchById(Integer id) {
+		return em.find(User.class, id);
+	}
+	
+	public boolean insertUser(User user) {
+		try {
+			em.getTransaction().begin();
+			em.persist(user);
+			em.getTransaction().commit();
+			return true;
+		} catch (Exception e) {
+			em.getTransaction().rollback();
+			return false;
+		}
+	}
+	
+}
