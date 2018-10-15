@@ -1,0 +1,17 @@
+$(function() {
+	
+	$('#btn-salvar').click(function(){
+		
+		var dados = $('#formCadastro').serializeArray();
+		
+		var dadosJson = {};
+
+	    $.map(unindexed_array, function(n, i){
+	    	dadosJson[n['name']] = n['value'];
+	    });
+		
+		
+		
+	});
+	
+});

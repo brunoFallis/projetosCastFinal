@@ -1,0 +1,25 @@
+package br.com.cast.controllers;
+
+import java.util.List;
+
+import javax.faces.bean.ManagedBean;
+
+import br.com.cast.business.PostBusiness;
+import br.com.cast.dto.PostDTO;
+
+@ManagedBean(name = "postlist")
+public class PostController {
+
+	private PostDTO postDTO;
+	private PostBusiness postBusiness;
+
+	public PostController() {
+		this.postDTO = new PostDTO();
+		this.postBusiness = new PostBusiness();
+	}
+
+	public List<PostDTO> listPosts(Integer id) {
+		return this.postBusiness.bringAllPosts(id);
+	}
+
+}

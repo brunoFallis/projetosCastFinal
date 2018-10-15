@@ -1,0 +1,10 @@
+package br.com.cast.controllers;
+
+import javax.faces.bean.ManagedBean;
+
+@ManagedBean(name="")
+public class PostEVRController {
+	
+	
+	
+}

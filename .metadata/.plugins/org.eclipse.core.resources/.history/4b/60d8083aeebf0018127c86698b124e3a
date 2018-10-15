@@ -1,0 +1,8 @@
+package br.com.cast.controllers;
+
+public class PostController {
+	
+	private PostDTO postDTO;
+	private PostBusiness postBusiness;
+	
+}

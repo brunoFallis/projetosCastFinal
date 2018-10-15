@@ -1,0 +1,27 @@
+INDEX VERSION 1.130
+C:\treinamento\projetos\wsweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2017641114.index
+\hibernate-brunao\src\main\java
+C:\treinamento\projetos\wsweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3316818106.index
+\sigec\src\main\java
+C:\treinamento\projetos\wsweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4189612774.index
+\ManterPessoa\src\main\resources
+C:\treinamento\projetos\wsweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3693768313.index
+\web-hibernate\src\main\resources
+C:\treinamento\projetos\wsweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2580929871.index
+\hospital\src\main\java
+C:\treinamento\projetos\wsweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2862506251.index
+\jsf-introBruno\src\main\resources
+C:\treinamento\projetos\wsweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\484539087.index
+\calculator\src
+C:\treinamento\projetos\wsweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1883284970.index
+\sigec\src\main\java
+C:\treinamento\projetos\wsweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2105980626.index
+\sigec\src\main\java
+C:\treinamento\projetos\wsweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\581033510.index
+\web-h\src\main\resources
+C:\treinamento\projetos\wsweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2193716862.index
+\postSystem\src\main\java
+C:\treinamento\projetos\wsweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2337080861.index
+\crudWEB\src
+C:\treinamento\projetos\wsweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2093321934.index
+\jsfbrunoso\src\main\java

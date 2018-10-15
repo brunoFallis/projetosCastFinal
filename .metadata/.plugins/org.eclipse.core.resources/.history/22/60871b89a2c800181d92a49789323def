@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="jquery-3.3.1.js"></script>
+<script src="index.js"></script>
+</head>
+<body>
+	<form id="formCadastro" method="post">
+
+		<div>
+			cpf:<input name="cpf"/>
+		</div>
+		
+		<div>
+			nome:<input name="nome"/>
+		</div>
+		
+		<div>
+			email:<input name="email"/>
+		</div>
+
+<!-- 		<div> -->
+<!-- 			cep:<input /> -->
+<!-- 		</div> -->
+		
+<!-- 		<div> -->
+<!-- 			logradouro:<input /> -->
+<!-- 		</div> -->
+		
+<!-- 		<div> -->
+<!-- 			numero:<input /> -->
+<!-- 		</div> -->
+		
+<!-- 		<div> -->
+<!-- 			complemento:<input /> -->
+<!-- 		</div> -->
+		
+<!-- 		<div> -->
+<!-- 			bairro:<input /> -->
+<!-- 		</div> -->
+		
+<!-- 		<div> -->
+<!-- 			cidade:<input /> -->
+<!-- 		</div> -->
+		
+<!-- 		<div> -->
+<!-- 			uf:<input /> -->
+<!-- 		</div> -->
+
+		<button id="btn-salvar">salvar</button>
+
+	</form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+package br.com.cast.servlets;
+
+import java.io.IOException;
+import java.util.stream.Collectors;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.google.gson.Gson;
+
+import br.com.cast.dto.PessoaDTO;
+import br.com.cast.models.Pessoa;
+
+/**
+ * Servlet implementation class Test
+ */
+@WebServlet("/salvar")
+public class Salvar extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String json = req.getReader().lines().collect(Collectors.joining());
+		
+		Gson gson = new Gson();
+		PessoaDTO pessoaDTO = gson.fromJson(json, Pessoa.class);
+		
+		resp.setContentType("application/json");
+		
+		System.out.println(pessoa);
+	}
+
+
+}

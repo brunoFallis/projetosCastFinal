@@ -1,0 +1,31 @@
+package br.com.cast.controllers;
+
+import javax.faces.bean.ManagedBean;
+
+import br.com.cast.business.UserBusiness;
+import br.com.cast.dto.UserDTO;
+
+@ManagedBean(name = "register")
+public class RegisterController {
+
+	private UserDTO userDTO;
+	private UserBusiness userBusiness;
+
+	public RegisterController() {
+		this.userDTO = new UserDTO();
+		this.userBusiness = new UserBusiness();
+	}
+
+	public String registerUser() {
+		if(this.userBusiness.insertUser(userDTO)) {
+			return "login?faces-redirect=true";
+		}else {
+			return "register";
+		}
+	}
+
+	public UserDTO getUserDTO() {
+		return userDTO;
+	}
+
+}

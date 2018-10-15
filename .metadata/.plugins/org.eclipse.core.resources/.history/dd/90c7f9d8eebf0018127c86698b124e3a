@@ -1,0 +1,17 @@
+package br.com.cast.business;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class PostDAO {
+	
+	EntityManagerFactory emf;
+	EntityManager em;
+	
+	public UserDAO() {
+		this.emf = Persistence.createEntityManagerFactory("puPostFinal");
+		this.em = emf.createEntityManager();
+	}
+	
+}

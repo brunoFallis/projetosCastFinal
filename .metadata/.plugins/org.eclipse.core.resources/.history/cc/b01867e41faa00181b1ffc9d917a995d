@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add contact page</title>
+</head>
+	<body>
+		
+		<center>
+			<form action="tables" method="post">
+				Name: <input type="text" name="name"><br>
+				Email: <input type="text" name="email"><br>
+				Adress: <input type="text" name="adress"><br>
+				Date of birth: <input type="text" name="dateBirth"><br>
+				<input type="submit" value="save" name="add">
+			</form>
+		</center>
+		
+	</body>
+</html>

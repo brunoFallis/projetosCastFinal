@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="CleanDialogSettings">
+		<item value="500" key="DIALOG_WIDTH"/>
+		<item value="true" key="TOGGLE_SELECTED"/>
+		<item value="402" key="DIALOG_HEIGHT"/>
+		<item value="433" key="DIALOG_X_ORIGIN"/>
+		<item value="96" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value=""/>
+			<item value="C:\Users\Cast\Downloads\newPhase (1)\zpostfinal"/>
+			<item value="C:\Users\Cast\Downloads\jsf-intro (1)\jsf-intro"/>
+			<item value="C:\Users\Cast\Downloads\jsf-intro\jsf-intro"/>
+			<item value="C:\treinamento\projetos\wsweb\hospital"/>
+			<item value="C:\Users\Cast\Downloads\web-hibernate\web-hibernate"/>
+			<item value="C:\treinamento\projetos\wsweb\web-hibernate"/>
+			<item value="C:\Users\Cast\Downloads\hibernate-jpa\hibernate-jpa"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Users\Cast\Downloads\crudweb.zip"/>
+			<item value="C:\Users\Cast\Downloads\prova_BRUNO_FALIS.zip"/>
+			<item value=""/>
+			<item value="C:\Users\Cast\Downloads\jsf-introBrunao (1).zip"/>
+			<item value="C:\Users\Cast\Downloads\jsf-introBrunao.zip"/>
+			<item value="C:\Users\Cast\Downloads\zatura.zip"/>
+			<item value="C:\Users\Cast\Downloads\postSystem.zip"/>
+			<item value="C:\Users\Cast\Downloads\hospital (2).zip"/>
+			<item value="C:\Users\Cast\Downloads\hospital (1).zip"/>
+			<item value="C:\Users\Cast\Downloads\hospital.zip"/>
+			<item value="C:\Users\Cast\Downloads\PROJETOS ZIP\hibernate crud.zip"/>
+			<item value="C:\Users\Cast\Downloads\crudWEB1.zip"/>
+			<item value="C:\Users\Cast\Downloads\crudWEBFinalUltimateJutsuCompilationVersion2.zip"/>
+			<item value="C:\Users\Cast\Downloads\crudWEBFinalUltimateJutsu.zip"/>
+			<item value="C:\Users\Cast\Downloads\crudWEB.zip"/>
+		</list>
+	</section>
+	<section name="ResourceNavigator">
+		<item value="Aggregate for window 1535547546785" key="ResourceWorkingSetFilter.STORE_WORKING_SET"/>
+		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>
+	</section>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.m2e.core.wizards.Maven2ProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.m2e"/>
+		</list>
+	</section>
+</section>

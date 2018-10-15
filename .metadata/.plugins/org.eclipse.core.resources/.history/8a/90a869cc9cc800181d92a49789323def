@@ -1,0 +1,19 @@
+$(function() {
+	
+	$('#btn-salvar').click(function(event){
+		
+		var dados = $('#formCadastro').serializeArray();
+		
+		console.log(JSON.stringify(dados));
+		
+		var dadosJson = {};
+
+	    $.map(dados, function(n, i){
+	    	dadosJson[n['name']] = n['value'];
+	    });
+	   	
+//	    $.post('salvar', dadosJson);
+				
+	});
+	
+});

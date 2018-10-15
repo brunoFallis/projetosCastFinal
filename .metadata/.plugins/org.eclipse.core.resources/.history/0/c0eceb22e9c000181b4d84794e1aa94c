@@ -1,0 +1,34 @@
+package br.com.cast.controllers;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+import javax.faces.bean.ManagedBean;
+
+import br.com.cast.business.PostBusiness;
+import br.com.cast.dto.PostDTO;
+import br.com.cast.entities.Post;
+
+@ManagedBean(name = "postlist")
+public class PostController {
+
+	private PostDTO postDTO;
+	private PostBusiness postBusiness;
+	private List<Post> listPosts;
+
+	public PostController() {
+		this.postDTO = new PostDTO();
+		this.postBusiness = new PostBusiness();
+		this.listPosts = new ArrayList<>();
+	}
+
+	public List<PostDTO> listPosts(Integer id) {
+		return this.postBusiness.bringAllPosts(id);
+	}
+
+	public void delete(Integer id) {
+		this.postBusiness.deletePost(id);
+	}
+
+}

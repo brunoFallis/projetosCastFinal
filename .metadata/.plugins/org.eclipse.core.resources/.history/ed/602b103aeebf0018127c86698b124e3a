@@ -1,0 +1,8 @@
+package br.com.cast.controllers;
+
+
+public class PostDTO {
+	
+	
+	
+}

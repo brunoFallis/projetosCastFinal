@@ -1,0 +1,9 @@
+package br.com.cast.business;
+
+public class BusinessPessoa {
+	
+	public void inserirPessoa() {
+		
+	}
+	
+}

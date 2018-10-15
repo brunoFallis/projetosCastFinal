@@ -1,0 +1,31 @@
+$(function() {
+	
+	
+	$('#btn-cadastrar').click(function(){
+		$('#container').load('cadastro.html');
+	});
+	
+	$('#container').on('click', '#btn-salvar',function(event){
+		
+		var dadosPessoa = $('#formPessoa').serializeArray();
+		var dadosEndereco = $('#formEndereco').serializeArray();
+		
+		var dadosJson = {};
+		
+		console.log(dadosPessoa.push());
+		
+	    $.map(dadosPessoa, function(n, i){
+	    	dadosJson[n['name']] = n['value'];
+	    });
+//	   	
+//	    $.post('salvar', JSON.stringify(dadosJson));
+	    
+	    event.preventDefault();
+	    
+	});
+	
+	$('#container').on('blur', "#cep", function(){
+		alert('teste');
+	})
+	
+});

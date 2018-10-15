@@ -1,0 +1,13 @@
+package br.com.cast.business;
+
+import br.com.cast.dto.PessoaDTO;
+
+public class BusinessPessoa {
+	
+	public void inserirPessoa(PessoaDTO pessoaDTO) {
+		
+		Pessoa pessoa = new Pessoa();
+		
+	}
+	
+}

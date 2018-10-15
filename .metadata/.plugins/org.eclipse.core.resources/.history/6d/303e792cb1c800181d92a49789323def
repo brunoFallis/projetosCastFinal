@@ -1,0 +1,37 @@
+$(function() {
+	
+	
+	$('#btn-cadastrar').click(function(){
+		$('#container').load('cadastro.html');
+	});
+	
+	$('#container').on('click', '#btn-salvar',function(event){
+		
+		var dadosPessoa = $('#formPessoa').serializeArray();
+		var enderecoDTO = $('#formEndereco').serializeArray();
+		
+		var dadosJson = {};
+		
+		var endereco =  {
+			enderecoDTO
+		}
+		
+		dadosPessoa.push(enderecoDTO);
+		
+	    $.map(dadosPessoa, function(n, i){
+	    	dadosJson[n['name']] = n['value'];
+	    });
+	   	
+		console.log(dadosJason)
+		
+//	    $.post('salvar', JSON.stringify(dadosJson));
+	    
+	    event.preventDefault();
+	    
+	});
+	
+	$('#container').on('blur', "#cep", function(){
+		alert('teste');
+	})
+	
+});

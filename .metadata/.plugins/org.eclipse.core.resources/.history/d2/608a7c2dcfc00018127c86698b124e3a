@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<head>
+<title><ui:insert name="title">Default title</ui:insert></title>
+</head>
+
+<body>
+	<ui:debug hotkey="x"
+		rendered="#{initParam['javax.faces.FACELETS_DEVELOPMENT']}" />
+
+	<div id="header">
+		<div id="navbar"
+			style="text-align: center; width: 100%; height: 100px; background-color: #007bff; color: white;">
+			<ui:insert name="header">
+				<h1>Post System</h1>
+			</ui:insert>
+		</div>
+	</div>
+
+	<div id="content"
+		style="text-align: center; width: 300px;margin:">
+		<h1>Hi #{user.userDTO.username}, here is your request:</h1>
+		<ui:insert name="content">
+
+		</ui:insert>
+	</div>
+
+	<div id="footer">
+		<ui:insert name="footer">
+			<div id="navbar"
+				style="text-align: center; width: 100%; height: 100px; background-color: #007bff; color: white;">
+				<h1>Footer</h1>
+			</div>
+		</ui:insert>
+	</div>
+
+</body>
+
+</html>

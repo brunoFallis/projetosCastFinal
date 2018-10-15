@@ -1,0 +1,28 @@
+$(function() {
+	
+	
+	$('#btn-cadastrar').click(function(){
+		$('#container').load('cadastro.html');
+	});
+	
+	$('#container').on('click', '#btn-salvar',function(event){
+		
+		var dados = $('#formCadastro').serializeArray();
+		
+		var dadosJson = {};
+
+	    $.map(dados, function(n, i){
+	    	dadosJson[n['name']] = n['value'];
+	    });
+	   	
+	    $.post('salvar', JSON.stringify(dadosJson));
+	    
+	    event.PreventDefault();
+	    
+	});
+	
+	$('#formCadastro').on('blur', "#cep", function(){
+		
+	})
+	
+});

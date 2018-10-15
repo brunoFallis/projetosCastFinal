@@ -1,0 +1,93 @@
+package br.com.cast.projetinho.business;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import br.com.cast.projetinho.dao.PessoaDAO;
+import br.com.cast.projetinho.dto.EnderecoDTO;
+import br.com.cast.projetinho.dto.PessoaDTO;
+import br.com.cast.projetinho.models.Endereco;
+import br.com.cast.projetinho.models.Pessoa;
+
+@Service
+public class BusinessPessoa {
+
+	@Autowired
+	private PessoaDAO dao;
+	
+	public List<PessoaDTO> buscaTodos() {
+
+		List<PessoaDTO> dtoList = new ArrayList<>();
+
+		for (Pessoa p : this.dao.buscaTodos()) {
+			dtoList.add(mapeiaParaPessoaDTO(p));
+		}
+
+		return dtoList;
+
+	}
+	
+	public void delete(String cpf) {
+		
+	}
+	
+	@Transactional
+	public void inserir(PessoaDTO dto) {
+		dao.inserirPessoa(mapeiaParaPessoa(dto));
+	}
+
+	public Pessoa mapeiaParaPessoa(PessoaDTO pessoaDTO) {
+		Pessoa pessoa = new Pessoa();
+
+		pessoa.setCpf(pessoaDTO.getCpf());
+		pessoa.setNome(pessoaDTO.getNome());
+		pessoa.setEmail(pessoaDTO.getEmail());
+
+		Endereco endereco = new Endereco();
+
+		EnderecoDTO eDTO = pessoaDTO.getEnderecoDTO();
+
+		endereco.setCep(eDTO.getCep());
+		endereco.setLogradouro(eDTO.getLogradouro());
+		endereco.setNumero(eDTO.getNumero());
+		endereco.setComplemento(eDTO.getComplemento());
+		endereco.setCidade(eDTO.getCidade());
+		endereco.setBairro(eDTO.getBairro());
+		endereco.setUf(eDTO.getUf());
+
+		pessoa.setEndereco(endereco);
+
+		return pessoa;
+	}
+
+	public PessoaDTO mapeiaParaPessoaDTO(Pessoa pessoa) {
+		PessoaDTO dto = new PessoaDTO();
+
+		dto.setCpf(pessoa.getCpf());
+		dto.setNome(pessoa.getNome());
+		dto.setEmail(pessoa.getEmail());
+
+		EnderecoDTO enderecoDTO = new EnderecoDTO();
+
+		Endereco endereco = pessoa.getEndereco();
+
+		enderecoDTO.setCep(endereco.getCep());
+		enderecoDTO.setLogradouro(endereco.getLogradouro());
+		enderecoDTO.setNumero(endereco.getNumero());
+		enderecoDTO.setComplemento(endereco.getComplemento());
+		enderecoDTO.setCidade(endereco.getCidade());
+		enderecoDTO.setBairro(endereco.getBairro());
+		enderecoDTO.setUf(endereco.getUf());
+
+		dto.setEnderecoDTO(enderecoDTO);
+
+		return dto;
+	}
+
+	
+
+}

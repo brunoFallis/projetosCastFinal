@@ -1,0 +1,26 @@
+$(function() {
+	
+	
+	
+	
+	$('#container').on(function(event){
+		
+		var dados = $('#formCadastro').serializeArray();
+		
+		var dadosJson = {};
+
+	    $.map(dados, function(n, i){
+	    	dadosJson[n['name']] = n['value'];
+	    });
+	   	
+	    $.post('salvar', JSON.stringify(dadosJson));
+				
+	    event.preventDefault();
+	    
+	});
+	
+	$('#formCadastro').on('blur', "#cep", function(){
+		
+	})
+	
+});

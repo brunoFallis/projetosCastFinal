@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/index.xhtml">
+
+	<ui:define name="header">
+		<h1>Hi #{user.userDTO.username}, here is your post list:</h1>
+	</ui:define>
+
+	<ui:define name="content">
+		<h:form>
+
+			<p:commandButton value="new post" action="addPost?faces-redirect=true" process="@this" ajax="false"/>
+
+			<p:dataTable var="post"
+				value="#{postlist.listPosts(user.userDTO.id)}"
+				paginator="true" rows="5" rowsPerPageTemplate="5,10,15" lazy="true">
+
+				<p:column headerText="Title">
+					#{post.title}
+				</p:column>
+
+				<p:column headerText="Text">
+					#{post.text}
+				</p:column>
+				
+				<p:column></p:column>
+
+			</p:dataTable>
+
+		</h:form>
+	</ui:define>
+
+</ui:composition>
+
+</html>

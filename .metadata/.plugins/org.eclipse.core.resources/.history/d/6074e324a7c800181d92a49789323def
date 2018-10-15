@@ -1,0 +1,16 @@
+package br.com.cast.business;
+
+import br.com.cast.dto.PessoaDTO;
+import br.com.cast.models.Pessoa;
+
+public class BusinessPessoa {
+	
+	public void inserirPessoa(PessoaDTO pessoaDTO) {
+		
+		Pessoa pessoa = new Pessoa();
+		
+		pessoa.setCpf(cpf);
+		
+	}
+	
+}

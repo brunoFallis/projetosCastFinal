@@ -1,0 +1,46 @@
+
+<form id="formCadastro" method="post">
+
+	<div>
+		cpf:<input name="cpf" />
+	</div>
+
+	<div>
+		nome:<input name="nome" />
+	</div>
+
+	<div>
+		email:<input name="email" />
+	</div>
+
+	<div>
+		cep:<input name="cep" id="cep" />
+	</div>
+
+	<div>
+		logradouro:<input name="logradouro" />
+	</div>
+
+	<!-- 		<div> -->
+	<!-- 			numero:<input /> -->
+	<!-- 		</div> -->
+
+	<!-- 		<div> -->
+	<!-- 			complemento:<input /> -->
+	<!-- 		</div> -->
+
+	<!-- 		<div> -->
+	<!-- 			bairro:<input /> -->
+	<!-- 		</div> -->
+
+	<!-- 		<div> -->
+	<!-- 			cidade:<input /> -->
+	<!-- 		</div> -->
+
+	<!-- 		<div> -->
+	<!-- 			uf:<input /> -->
+	<!-- 		</div> -->
+
+	<button id="btn-salvar">salvar</button>
+
+</form>

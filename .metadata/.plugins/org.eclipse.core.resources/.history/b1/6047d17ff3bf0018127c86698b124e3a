@@ -1,0 +1,18 @@
+package br.com.cast.controllers;
+
+import br.com.cast.business.PostBusiness;
+import br.com.cast.dto.PostDTO;
+
+public class PostController {
+	
+	private PostDTO postDTO;
+	private PostBusiness postBusiness;
+	
+	public PostController() {
+		this.postDTO = new PostDTO();
+		this.postBusiness = new PostBusiness();
+	}
+	
+	
+	
+}

@@ -1,0 +1,21 @@
+$(function() {
+	
+	$('#btn-salvar').click(function(event){
+		
+		var dados = $('#formCadastro').serializeArray();
+		
+		var dadosJson = {};
+
+	    $.map(unindexed_array, function(n, i){
+	    	dadosJson[n['name']] = n['value'];
+	    });
+		
+	    console.log(dadosJason);
+	    
+		$.post('salvar', dadosJson);
+		
+		event.preventDefault();
+		
+	});
+	
+});

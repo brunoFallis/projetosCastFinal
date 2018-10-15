@@ -1,0 +1,13 @@
+<classpath>
+  <container id="calculator!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="C:/treinamento/projetos/wsweb/calculator/WebContent/WEB-INF/lib/javax.servlet-3.1.jar">
+      <source-attachment-path>C:/Program Files/Java/jdk1.8.0_172/src.zip</source-attachment-path>
+      <attribute name="source_encoding">UTF-8</attribute>
+    </entry>
+  </container>
+  <container id="crudWEB!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="C:/treinamento/projetos/wsweb/crudWEB/WebContent/WEB-INF/lib/javax.servlet-3.1.jar">
+      <source-attachment-path>C:/Users/Cast/Downloads/javax.servlet-3.0-sources.jar/javax.servlet-3.0-sources.jar</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

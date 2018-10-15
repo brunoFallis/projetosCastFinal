@@ -1,0 +1,30 @@
+package br.com.cast.business;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.cast.dto.PostDTO;
+import br.com.cast.entities.Post;
+
+public class PostBusiness {
+	
+	private PostDAO postDAO;
+	
+	public PostBusiness() {
+		this.postDAO = new PostDAO();
+	}
+	
+	public PostDTO bringAllPosts(Integer id) {
+		
+		List<PostDTO> postsDTO = new ArrayList<>();
+		
+		for(Post p : this.postDAO.postsByUser(id)) {
+			PostDTO dto = new PostDTO();
+			dto.setId(p.getId());
+			dto.setTitle(p.getTitle());
+			dto.setText(p.getText());
+		}
+		
+	}
+	
+}

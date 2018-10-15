@@ -1,0 +1,9 @@
+package br.com.cast.dto;
+
+
+public class PostDTO {
+	
+	private Integer id;
+	private String text;
+	
+}

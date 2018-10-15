@@ -1,0 +1,13 @@
+package br.com.cast.controllers;
+
+import javax.faces.bean.ManagedBean;
+
+import br.com.cast.dto.PostDTO;
+
+@ManagedBean(name="postC")
+public class PostEVRController {
+	
+	private PostDTO postDTO;
+	
+	
+}
