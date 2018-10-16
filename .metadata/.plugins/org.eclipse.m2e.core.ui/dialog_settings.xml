@@ -39,6 +39,9 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\treinamento\projetos\wsweb\climinha"/>
+			<item value="C:\Users\Cast\Downloads\testClima\testClima"/>
+			<item value="C:\treinamento\projetos\wsweb\projetinho"/>
 			<item value="C:\treinamento\projetos\wsweb"/>
 			<item value="C:\Users\Cast\Downloads\qualquerNome\qualquerNome"/>
 			<item value="C:\Users\Cast\Downloads\teste"/>
