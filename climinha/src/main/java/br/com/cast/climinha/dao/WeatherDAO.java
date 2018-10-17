@@ -1,5 +1,8 @@
 package br.com.cast.climinha.dao;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -22,16 +25,27 @@ public class WeatherDAO {
 
 	@SuppressWarnings("unchecked")
 	public List<Clima> buscaPorCidade(String cidade) {
-
-		Query query = this.entityManager.createQuery("from Clima where cidade = :cidade");
-		query.setParameter("cidade", cidade);
+		
+		Date now = new Date();
+		
+		String data = new SimpleDateFormat("yyyy-MM-dd").format(now);
+		
+		try {
+			now = new SimpleDateFormat("yyyy-MM-dd").parse(data);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		Query query = this.entityManager.createQuery("from Clima where cidade = :cidade and data >= :dataTxt");
+		query.setParameter("cidade", cidade).setParameter("dataTxt", now);
+		
 
 		return query.getResultList();
 	}
 
 	public void deletePorCidade(String cidade) {
 		
-		Query query = this.entityManager.createQuery("delete from Clima where cidade = :cidade");
+		Query query = this.entityManager.createQuery("delete from Clima where lower(cidade) = lower(:cidade)");
 		query.setParameter("cidade", cidade);
 		query.executeUpdate();
 		

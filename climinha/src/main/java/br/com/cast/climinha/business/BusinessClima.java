@@ -27,7 +27,7 @@ public class BusinessClima {
 
 	@Transactional
 	public List<ResultWeatherDTO> buscaClimaPorCidade(String cidade) {
-
+		
 		List<Clima> climasCidades = wd.buscaPorCidade(cidade);
 		List<String> datas = new ArrayList<>();
 

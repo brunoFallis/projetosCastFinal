@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="br.com.cast.jsfintroBruno.dtos.group1"/>
-<fullyQualifiedTypeName name="javax.validation.constraints.Size"/>
-<fullyQualifiedTypeName name="javax.validation.constraints.Min"/>
 <fullyQualifiedTypeName name="javax.validation.constraints.Max"/>
 <fullyQualifiedTypeName name="br.com.cast.jsfintroBruno.managedbean.StudentBusiness"/>
 <fullyQualifiedTypeName name="br.com.cast.models.StudentDAO"/>
 <fullyQualifiedTypeName name="br.com.cast.jsfintroBruno.dtos.StudentDTO"/>
 <fullyQualifiedTypeName name="br.com.cast.models.Student"/>
-<fullyQualifiedTypeName name="javax.persistence.Query"/>
 <fullyQualifiedTypeName name="br.com.cast.entities.Post"/>
 <fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
 <fullyQualifiedTypeName name="br.com.cast.dto.PostDTO"/>
@@ -45,7 +41,6 @@
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="br.com.cast.climinha.dto.WeatherDataDTO"/>
 <fullyQualifiedTypeName name="br.com.cast.climinha.dto.ResultWeatherDTO"/>
 <fullyQualifiedTypeName name="javax.persistence.Entity"/>
@@ -58,6 +53,11 @@
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="br.com.cast.climinha.dao.WeatherDAO"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="org.hibernate.mapping.Map"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="javax.persistence.Query"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 </qualifiedTypeNameHistroy>
