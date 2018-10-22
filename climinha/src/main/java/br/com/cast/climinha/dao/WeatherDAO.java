@@ -36,7 +36,7 @@ public class WeatherDAO {
 			e.printStackTrace();
 		}
 		
-		Query query = this.entityManager.createQuery("from Clima where cidade = :cidade and data >= :dataTxt");
+		Query query = this.entityManager.createQuery("from Clima where lower(cidade) = lower(:cidade) and data >= :dataTxt");
 		query.setParameter("cidade", cidade).setParameter("dataTxt", now);
 		
 
