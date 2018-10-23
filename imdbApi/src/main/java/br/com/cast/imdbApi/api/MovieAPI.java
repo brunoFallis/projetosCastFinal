@@ -29,8 +29,13 @@ public class MovieAPI {
 	}
 	
 	@GetMapping("/{nomeFilme}")
-	public MovieDTO returnMovie(@PathVariable("nomeFilme") String nomeFilme){
-		return businessMovie.returnMovie(nomeFilme);
+	public List<MovieDTO> returnDBMovies(@PathVariable("nomeFilme") String nomeFilme){
+		return businessMovie.returnDBMovies(nomeFilme);
+	}
+	
+	@GetMapping("/api/{nomeFilme}")
+	public List<MovieDTO> returnAPIMovies(@PathVariable("nomeFilme") String nomeFilme){
+		return businessMovie.returnAPIMovies(nomeFilme);
 	}
 	
 	@PostMapping()

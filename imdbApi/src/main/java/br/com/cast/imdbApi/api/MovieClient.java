@@ -4,12 +4,12 @@ import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-import br.com.cast.imdbApi.dto.MovieDTO;
+import br.com.cast.imdbApi.dto.ResultMovieDTO;
 
 @Component
 public class MovieClient {
 
-	private static final String MOVIE_URL = "http://www.omdbapi.com/?apikey=d30f6f6d&t={nomeFilme}";
+	private static final String MOVIE_URL = "http://www.omdbapi.com/?apikey=d30f6f6d&s={nomeFilme}";
 	
 	private final RestTemplate restTemplate;
 	
@@ -17,8 +17,8 @@ public class MovieClient {
 		this.restTemplate = builder.build();
 	}
 	
-	public MovieDTO fetchMovie(String nomeFilme) {
-		MovieDTO dto = this.restTemplate.getForObject(MovieClient.MOVIE_URL, MovieDTO.class, nomeFilme);
+	public ResultMovieDTO fetchMovie(String nomeFilme) {
+		ResultMovieDTO dto = this.restTemplate.getForObject(MovieClient.MOVIE_URL, ResultMovieDTO.class, nomeFilme);
 		return dto;
 	}
 	

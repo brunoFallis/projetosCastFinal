@@ -35,14 +35,11 @@ public class MovieDAO {
 		return query.getResultList();
 	}
 
-	public Movie searchByName(String nomeFilme) {
-		Query query = this.entityManager.createQuery("from Movie where lower(title) = lower(:title)");
-		query.setParameter("title", nomeFilme);
-		try {
-			return (Movie)query.getSingleResult();
-		}catch(Exception e) {
-			return null;
-		}
+	@SuppressWarnings("unchecked")
+	public List<Movie> moviesByName(String nomeFilme) {
+		Query query = this.entityManager.createQuery("from Movie where lower(title) like lower(:title)");
+		query.setParameter("title", "%"+nomeFilme+"%");
+		return query.getResultList();
 	}
 	
 }

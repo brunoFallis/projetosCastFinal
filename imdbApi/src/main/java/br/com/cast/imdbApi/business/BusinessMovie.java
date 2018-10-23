@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import br.com.cast.imdbApi.api.MovieClient;
 import br.com.cast.imdbApi.dao.MovieDAO;
 import br.com.cast.imdbApi.dto.MovieDTO;
+import br.com.cast.imdbApi.dto.ResultMovieDTO;
 import br.com.cast.imdbApi.entidade.Movie;
 
 @Service
@@ -21,25 +22,36 @@ public class BusinessMovie {
 	@Autowired
 	private MovieDAO movieDAO;
 
+	@Transactional
+	public List<MovieDTO> returnDBMovies(String nomeFilme) {
+
+		List<Movie> movies = movieDAO.moviesByName(nomeFilme);
+		List<MovieDTO> moviesDTO = new ArrayList<>();
+
+		for (Movie m : movies) {
+			MovieDTO dto = new MovieDTO();
+			dto.fromMovie(m);
+			moviesDTO.add(dto);
+		}
+		return moviesDTO;
+	}
+
+	public List<MovieDTO> returnAPIMovies(String nomeFilme) {
+		ResultMovieDTO movies = movieClient.fetchMovie(nomeFilme);
+		List<MovieDTO> moviesDTO = new ArrayList<>();
+
+		for (MovieDTO dto : movies.getSearch()) {
+			moviesDTO.add(dto);
+		}
+
+		return moviesDTO;
+
+	}
+
 	public void insert(MovieDTO dto) {
 		Movie m = new Movie();
 		m.fromMovieDTO(dto);
 		movieDAO.insertMovie(m);
-	}
-	
-	@Transactional
-	public MovieDTO returnMovie(String nomeFilme) {
-		Movie movie = movieDAO.searchByName(nomeFilme);
-		MovieDTO movieDTO = new MovieDTO();
-		if(movie == null) {
-			movieDTO = movieClient.fetchMovie(nomeFilme);
-			this.insert(movieDTO);
-			return movieDTO;
-		}
-		
-		movieDTO.fromMovie(movie);
-		return movieDTO;
-		
 	}
 
 	@Transactional
@@ -65,9 +77,9 @@ public class BusinessMovie {
 			moviesDTO.add(dto);
 
 		}
-		
+
 		return moviesDTO;
-		
+
 	}
 
 }
