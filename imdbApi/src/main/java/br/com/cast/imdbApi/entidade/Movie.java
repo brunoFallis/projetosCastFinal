@@ -1,5 +1,6 @@
 package br.com.cast.imdbApi.entidade;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
@@ -19,9 +20,9 @@ public class Movie {
 	private String imdbID;
 	private String type;
 	private String poster;
-	
-	@OneToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="imdb_detail")
+
+	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinColumn(name = "imdb_detail")
 	private MovieDetail movieDetail;
 
 	public String getTitle() {
@@ -64,12 +65,31 @@ public class Movie {
 		this.poster = poster;
 	}
 
+	public MovieDetail getMovieDetail() {
+		return movieDetail;
+	}
+
+	public void setMovieDetail(MovieDetail movieDetail) {
+		this.movieDetail = movieDetail;
+	}
+
+	@Override
+	public String toString() {
+		return "Movie [title=" + title + ", year=" + year + ", imdbID=" + imdbID + ", type=" + type + ", poster="
+				+ poster + ", movieDetail=" + movieDetail + "]";
+	}
+
 	public void fromMovieDTO(MovieDTO dto) {
 		this.setTitle(dto.getTitle());
 		this.setType(dto.getType());
 		this.setYear(dto.getYear());
 		this.setPoster(dto.getPoster());
 		this.setImdbID(dto.getImdbID());
+
+		if (dto.getMovieDetailDTO() != null) {
+			this.getMovieDetail().fromMovieDetailDTO(dto.getMovieDetailDTO());
+		}
+
 	}
 
 }

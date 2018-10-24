@@ -1,20 +1,24 @@
-package br.com.cast.imdbApi.entidade;
+package br.com.cast.imdbApi.dto;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-import br.com.cast.imdbApi.dto.MovieDetailDTO;
+import br.com.cast.imdbApi.entidade.MovieDetail;
 
-@Entity
-@Table(name="detail", schema="movie")
-public class MovieDetail {
+public class MovieDetailDTO {
 
-	@Id
+	@JsonProperty("imdbID")
 	private String imdbid;
+
+	@JsonProperty("Released")
 	private String released;
+
+	@JsonProperty("Genre")
 	private String genre;
+
+	@JsonProperty("Director")
 	private String director;
+
+	@JsonProperty("Plot")
 	private String plot;
 
 	public String getImdbid() {
@@ -56,13 +60,13 @@ public class MovieDetail {
 	public void setPlot(String plot) {
 		this.plot = plot;
 	}
-
-	public void fromMovieDetailDTO(MovieDetailDTO movieDetailDTO) {
-		this.setDirector(movieDetailDTO.getDirector());
-		this.setGenre(movieDetailDTO.getGenre());
-		this.setImdbid(movieDetailDTO.getImdbid());
-		this.setPlot(movieDetailDTO.getPlot());
-		this.setReleased(movieDetailDTO.getReleased());
-	}
 	
+	public void fromMovieDetail(MovieDetail movieDetail) {
+		this.setDirector(movieDetail.getDirector());
+		this.setGenre(movieDetail.getGenre());
+		this.setImdbid(movieDetail.getImdbid());
+		this.setPlot(movieDetail.getPlot());
+		this.setReleased(movieDetail.getReleased());
+	}
+
 }

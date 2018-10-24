@@ -16,6 +16,10 @@ public class MovieDAO {
 	@PersistenceContext
 	private EntityManager entityManager;
 
+	public Movie searchById(String id) {
+		return this.entityManager.find(Movie.class, id);
+	}
+	
 	public void insertMovie(Movie movie) {
 		this.entityManager.persist(movie);
 	}
@@ -40,6 +44,15 @@ public class MovieDAO {
 		Query query = this.entityManager.createQuery("from Movie where lower(title) like lower(:title)");
 		query.setParameter("title", "%"+nomeFilme+"%");
 		return query.getResultList();
+	}
+
+	public Movie verifyDetail(String imdbid) {
+		Query query = this.entityManager.createQuery("select m "
+												   + "from Movie m "
+												   + "left join m.movieDetail "
+												   + "where m.imdbID = :imdbid");
+		query.setParameter("imdbid", imdbid);
+		return (Movie)query.getSingleResult();
 	}
 	
 }

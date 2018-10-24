@@ -38,6 +38,12 @@ public class MovieAPI {
 		return businessMovie.returnAPIMovies(nomeFilme);
 	}
 	
+	@GetMapping("/detail/{id}")
+	public MovieDTO returnMovieDetail(@PathVariable("id") String id){
+		return businessMovie.returnMovieDetail(id);
+	}
+	
+	
 	@PostMapping()
 	public void insertMovie(@RequestBody MovieDTO dto) {
 		businessMovie.insert(dto);

@@ -21,6 +21,8 @@ public class MovieDTO {
 	@JsonProperty("imdbID")
 	private String imdbID;
 
+	private MovieDetailDTO movieDetailDTO;
+
 	public String getTitle() {
 		return title;
 	}
@@ -61,12 +63,27 @@ public class MovieDTO {
 		this.imdbID = imdbID;
 	}
 
+	public MovieDetailDTO getMovieDetailDTO() {
+		return movieDetailDTO;
+	}
+
+	public void setMovieDetailDTO(MovieDetailDTO movieDetailDTO) {
+		this.movieDetailDTO = movieDetailDTO;
+	}
+
 	public void fromMovie(Movie movie) {
 		this.setTitle(movie.getTitle());
 		this.setType(movie.getType());
 		this.setYear(movie.getYear());
 		this.setPoster(movie.getPoster());
 		this.setImdbID(movie.getImdbID());
+
+		if (movie.getMovieDetail() != null) {
+			MovieDetailDTO dto = new MovieDetailDTO();
+			dto.fromMovieDetail(movie.getMovieDetail());
+			this.setMovieDetailDTO(dto);
+		}
+			
 	}
 
 }
