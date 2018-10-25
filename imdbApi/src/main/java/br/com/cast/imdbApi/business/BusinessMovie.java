@@ -59,7 +59,11 @@ public class BusinessMovie {
 
 		for (MovieDTO dto : movies.getSearch()) {
 			if (movieDAO.searchById(dto.getImdbID()) == null) {
-				this.insert(dto);
+				
+				Movie m = new Movie();
+				m.fromMovieDTO(dto);
+				movieDAO.insertMovie(m);
+				
 				moviesDTO.add(dto);
 			}
 		}

@@ -15,9 +15,9 @@ import br.com.cast.imdbApi.dto.MovieDTO;
 public class Movie {
 
 	@Id
+	private String imdbID;
 	private String title;
 	private String year;
-	private String imdbID;
 	private String type;
 	private String poster;
 
