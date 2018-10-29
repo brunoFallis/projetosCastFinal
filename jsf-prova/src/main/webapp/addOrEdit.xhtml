@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="template.xhtml">
+
+	<ui:define name="content">
+	
+		<h:form>
+			
+			<p:autoUpdate />
+			
+			<h:inputHidden value="#{cadastro.livroDTO.id}" />
+	
+			<div>
+				<p:inputText id="titulo" placeholder="titulo"
+					value="#{cadastro.livroDTO.titulo}" />
+					<div>
+					<p:message for="titulo" style="color: red">
+		    		</p:message>
+		    		</div>
+			</div>
+
+			<div>
+				<p:calendar id="data" placeholder="data de publicacao" dateOnly="true"
+					showOn="button" value="#{cadastro.livroDTO.publicacao}" pattern="dd/MM/yyyy" />
+				<div>
+				<p:message for="data" style="color: red">
+		    	</p:message>
+		    	</div>
+			</div>
+
+			<div>
+				<p:selectOneMenu
+					value="#{cadastro.livroDTO.autorDTO.id}" required="true" requiredMessage="campo vazio">
+
+					<f:selectItem itemValue="" itemLabel="Selecione" />
+					<f:selectItems value="#{cadastro.autores}" var="autor"
+						itemValue="#{autor.id}" itemLabel="#{autor.nome}" />
+				</p:selectOneMenu>
+			</div>
+			
+			<div>
+				<p:selectOneMenu
+					value="#{cadastro.livroDTO.categoriaDTO.id}" required="true" requiredMessage="campo vazio">
+
+					<f:selectItem itemValue="" itemLabel="Selecione" />
+					<f:selectItems value="#{cadastro.categorias}" var="categoria"
+						itemValue="#{categoria.id}" itemLabel="#{categoria.descricao}" />
+				</p:selectOneMenu>
+			</div>
+			
+			<div>
+				<p:commandButton  value="salvar" action="#{cadastro.salvar}"/>
+			</div>
+			
+		</h:form>
+		
+	</ui:define>
+
+</ui:composition>
+</html>

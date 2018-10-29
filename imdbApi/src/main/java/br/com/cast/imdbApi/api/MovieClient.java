@@ -11,7 +11,7 @@ import br.com.cast.imdbApi.dto.ResultMovieDTO;
 public class MovieClient {
 
 	private static final String MOVIE_URL = "http://www.omdbapi.com/?apikey=d30f6f6d&s={nomeFilme}";
-	private static final String MOVIE_DETAIL_URL = "http://www.omdbapi.com/?i={id}&apikey=e3c4e473";
+	private static final String MOVIE_DETAIL_URL = "http://www.omdbapi.com/?i={id}&apikey=d30f6f6d";
 	
 	private final RestTemplate restTemplate;
 	

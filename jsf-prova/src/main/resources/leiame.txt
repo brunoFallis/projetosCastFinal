@@ -1,0 +1,6 @@
+* executar o arquivo script.sql no banco de dados
+* verificar o método logar da IdentidadeController e adequar o 
+  retorno do xhtml de acordo com o arquivo que você criou
+* substituir no template.xhtml os TODOs, 
+  <!-- TODO: adicionar link para listagem -->
+  <!-- TODO: adicionar link para cadastrar -->
